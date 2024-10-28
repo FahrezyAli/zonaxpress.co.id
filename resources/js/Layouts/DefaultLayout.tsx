@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 export default function Guest({ children }: Readonly<PropsWithChildren>) {
     return (
         <>
-            <header className="flex h-20 items-center justify-between bg-white">
+            <header className="flex h-20 items-center justify-between overflow-hidden bg-white">
                 {/* Logo */}
                 <div className="flex items-center bg-white">
                     <img
@@ -13,12 +13,10 @@ export default function Guest({ children }: Readonly<PropsWithChildren>) {
                         className="ml-6 mr-6 h-20"
                     />
                 </div>
-                <div className="relative w-11 overflow-hidden">
-                    <div className="h-20 origin-bottom-left rotate-45 transform bg-zonablue"></div>
-                </div>
+                <div className="inline-block h-0 w-0 border-b-[100px] border-l-[125px] border-r-0 border-t-0 border-solid border-b-zonablue border-l-transparent border-r-transparent border-t-transparent"></div>
 
                 {/* Navigation Links */}
-                <nav className="flex h-full w-full items-center justify-center space-x-8 bg-zonablue">
+                <nav className="flex h-full w-full items-center justify-end space-x-8 bg-zonablue pr-10">
                     <a href="#" className="text-lg text-white hover:underline">
                         Beranda
                     </a>
