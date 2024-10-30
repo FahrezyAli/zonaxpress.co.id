@@ -7,9 +7,9 @@ const ServiceCard: FC<{ title: string; description: string; icon: string }> = ({
     description,
     icon,
 }) => (
-    <Card className="border-2 border-zonared">
+    <Card className="border-2 border-zonared shadow-xl">
         <CardHeader>
-            <CardTitle>{title}</CardTitle>
+            <CardTitle className="text-xl font-bold">{title}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-row">
             <img

@@ -1,3 +1,4 @@
+import { BenefitCard } from '@/components/ui/benefit-card';
 import { Button } from '@/components/ui/button';
 import {
     Carousel,
@@ -7,6 +8,15 @@ import {
 import { ServiceCard } from '@/components/ui/service-card';
 import { Head } from '@inertiajs/react';
 import Autoplay from 'embla-carousel-autoplay';
+
+const partners = [
+    { name: 'PT. Adhya Avia Prima', logo: '/assets/logos/aap.png' },
+    { name: 'SPL Cargo', logo: '/assets/logos/spl.png' },
+    { name: 'MJP Cargo', logo: '/assets/logos/mjp.png' },
+    { name: 'CKL Cargo', logo: '/assets/logos/ckl.png' },
+    { name: 'LC Express', logo: '/assets/logos/lc.png' },
+    { name: 'MSA Kargo', logo: '/assets/logos/msa.png' },
+];
 
 export default function Welcome() {
     return (
@@ -65,9 +75,7 @@ export default function Welcome() {
                 </div>
             </div>
             <div className="container mx-auto px-4 py-8">
-                <h2 className="font-40 mb-4 text-3xl font-bold">
-                    Layanan Kami
-                </h2>
+                <h2 className="mb-4 text-3xl font-bold">Layanan Kami</h2>
                 <p className="mb-8 text-gray-600">
                     Kami menawarkan berbagai layanan <br />
                     pengiriman yang paling sesuai dengan <br />
@@ -96,6 +104,49 @@ export default function Welcome() {
                         icon="/assets/icons/warehouse.png"
                     />
                 </div>
+            </div>
+            <div className="container mx-auto px-4 py-12 text-center">
+                <h2 className="mb-8 text-3xl font-bold">MENGAPA KAMI?</h2>
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <BenefitCard
+                        title="CEPAT"
+                        description="Kami menyediakan semua jenis armada sesuai dengan permintaan kebutuhan pelanggan."
+                        icon="/assets/icons/speed.png"
+                    />
+                    <BenefitCard
+                        title="HEMAT"
+                        description="Biaya layanan yang lebih hemat dengan selalu menyesuaikan kebutuhan spesifik Anda."
+                        icon="/assets/icons/cost.png"
+                    />
+                    <BenefitCard
+                        title="AMAN"
+                        description="Dengan Customer Service Support akan memberi kemudahan untuk melakukan monitor dan Control."
+                        icon="/assets/icons/security.png"
+                    />
+                </div>
+            </div>
+            <div className="py-8 text-center">
+                <h2 className="bg-zonared text-2xl font-bold text-white">
+                    Siap Bekerjasama Dengan Kami?
+                </h2>
+                <p className="mb-6 mt-2 text-lg font-semibold">
+                    Perusahaan Yang Sudah Menggunakan Jasa Kami
+                </p>
+
+                <div className="flex flex-wrap justify-center gap-8 px-4">
+                    {partners.map((partner, index) => (
+                        <img
+                            key={index}
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="h-20 w-auto"
+                        />
+                    ))}
+                </div>
+
+                <Button className="mt-10 rounded-full bg-zonared px-6 py-2 text-white shadow-md hover:bg-red-700 focus:outline-none">
+                    Hubungi Kami
+                </Button>
             </div>
         </>
     );
