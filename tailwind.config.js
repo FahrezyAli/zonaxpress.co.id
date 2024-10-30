@@ -14,7 +14,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Arimo', ...defaultTheme.fontFamily.sans],
+                lora: ['Lora', ...defaultTheme.fontFamily.serif],
             },
             borderRadius: {
                 lg: 'var(--radius)',
@@ -63,6 +64,7 @@ export default {
                     5: 'hsl(var(--chart-5))',
                 },
                 zonablue: '#2100F3',
+                zonared: '#F50000',
             },
         },
     },

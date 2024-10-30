@@ -1,4 +1,4 @@
-import DefaultLayout from '@/Layouts/DefaultLayout';
+import { Button } from '@/components/ui/button';
 import { Head, router } from '@inertiajs/react';
 import { useState } from 'react';
 
@@ -39,7 +39,7 @@ export default function Forms() {
     };
 
     return (
-        <DefaultLayout>
+        <>
             <Head title="Forms" />
             <div className="flex min-h-screen items-center justify-center bg-gray-100">
                 <form
@@ -173,15 +173,15 @@ export default function Forms() {
                         />
                     </div>
 
-                    <button
+                    <Button
                         type="submit"
                         className="w-full rounded-md bg-zonablue px-4 py-2 text-white transition hover:bg-blue-500"
                         onClick={handleSubmit}
                     >
                         Submit
-                    </button>
+                    </Button>
                 </form>
             </div>
-        </DefaultLayout>
+        </>
     );
 }

@@ -1,4 +1,3 @@
-import DefaultLayout from '@/Layouts/DefaultLayout';
 import { Head } from '@inertiajs/react';
 
 export default function Result() {
@@ -13,7 +12,7 @@ export default function Result() {
     };
 
     return (
-        <DefaultLayout>
+        <>
             <Head title="Result" />
             <div className="mx-auto my-16 max-w-sm rounded-lg border border-gray-300 bg-white p-6 shadow-md">
                 <h2 className="mb-2 text-xl font-bold text-gray-700">
@@ -65,6 +64,6 @@ export default function Result() {
                     </div>
                 </div>
             </div>
-        </DefaultLayout>
+        </>
     );
 }

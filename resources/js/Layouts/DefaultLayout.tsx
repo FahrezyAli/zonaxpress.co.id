@@ -1,10 +1,11 @@
-import { PropsWithChildren } from 'react';
+import { Link } from '@inertiajs/react';
+import { ReactNode } from 'react';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
-export default function Guest({ children }: Readonly<PropsWithChildren>) {
+export default function DefaultLayout(children: ReactNode) {
     return (
-        <>
-            <header className="flex h-20 items-center justify-between overflow-hidden bg-white">
+        <div className="flex min-h-screen flex-col">
+            <header className="sticky left-0 top-0 z-20 flex h-20 w-full items-center justify-between overflow-hidden bg-white opacity-100">
                 {/* Logo */}
                 <div className="flex items-center bg-white">
                     <img
@@ -17,25 +18,40 @@ export default function Guest({ children }: Readonly<PropsWithChildren>) {
 
                 {/* Navigation Links */}
                 <nav className="flex h-full w-full items-center justify-end space-x-8 bg-zonablue pr-10">
-                    <a href="#" className="text-lg text-white hover:underline">
+                    <Link
+                        href="#"
+                        className="text-lg text-white hover:underline"
+                    >
                         Beranda
-                    </a>
-                    <a href="#" className="text-lg text-white hover:underline">
+                    </Link>
+                    <Link
+                        href="#"
+                        className="text-lg text-white hover:underline"
+                    >
                         Layanan
-                    </a>
-                    <a href="#" className="text-lg text-white hover:underline">
+                    </Link>
+                    <Link
+                        href="#"
+                        className="text-lg text-white hover:underline"
+                    >
                         Klien
-                    </a>
-                    <a href="#" className="text-lg text-white hover:underline">
+                    </Link>
+                    <Link
+                        href="#"
+                        className="text-lg text-white hover:underline"
+                    >
                         Tentang Kami
-                    </a>
-                    <a href="#" className="text-lg text-white hover:underline">
+                    </Link>
+                    <Link
+                        href="#"
+                        className="text-lg text-white hover:underline"
+                    >
                         Kontak
-                    </a>
+                    </Link>
                 </nav>
             </header>
-            {children}
-            <footer className="z-10 bg-zonablue px-4 py-8 text-white">
+            <main className="flex-1"> {children}</main>
+            <footer className="bg-zonablue px-4 py-8 text-white">
                 <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-8 md:grid-cols-3">
                     {/* Logo and Description */}
                     <div className="flex flex-col items-center md:items-start">
@@ -47,7 +63,7 @@ export default function Guest({ children }: Readonly<PropsWithChildren>) {
                             />
                         </div>
                         <p className="text-center md:text-left">
-                            Zonaxpress adalah perusahaan penyedia logistik yang
+                            ZonaXpress adalah perusahaan penyedia logistik yang
                             mengedepan efisiensi dan efektivitas pendistribusian
                             barang cargo dan pos.
                         </p>
@@ -72,7 +88,7 @@ export default function Guest({ children }: Readonly<PropsWithChildren>) {
                     {/* Tentang Kami Section */}
                     <div className="text-center md:text-left">
                         <h2 className="mb-4 text-xl font-bold">Tentang Kami</h2>
-                        <p>Kantor Pusat Zonxpress</p>
+                        <p>Kantor Pusat ZonaXpress</p>
                         <p>Perumahan Bumi Indah,</p>
                         <p>Jl. Krisan 4 Blok GL23 Kabupaten Tangerang 15660</p>
                         <p className="mt-4">Email: official@zonaxpress.co.id</p>
@@ -84,6 +100,6 @@ export default function Guest({ children }: Readonly<PropsWithChildren>) {
                     <p>Copyright ©zonaxpress 2024. All Right Reserve</p>
                 </div>
             </footer>
-        </>
+        </div>
     );
 }
