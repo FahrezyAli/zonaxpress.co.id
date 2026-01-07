@@ -19,13 +19,13 @@ export default function DefaultLayout(children: ReactNode) {
                 {/* Navigation Links */}
                 <nav className="flex h-full w-full items-center justify-end space-x-8 bg-zonablue pr-10">
                     <Link
-                        href="#"
+                        href="welcome"
                         className="text-lg text-white hover:underline"
                     >
                         Beranda
                     </Link>
                     <Link
-                        href="#"
+                        href="/"
                         className="text-lg text-white hover:underline"
                     >
                         Layanan
